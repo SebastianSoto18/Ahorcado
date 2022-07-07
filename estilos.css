@@ -142,3 +142,12 @@ nav h2 {
       opacity: 0;
     }
   }
+
+  @media screen and (max-width: 740px){
+    main{
+    font-size:19px;
+    }
+    header h1,h2{  
+    font-size:15px;
+    }
+  }
