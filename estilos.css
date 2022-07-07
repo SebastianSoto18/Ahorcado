@@ -1,3 +1,11 @@
+html, body{
+  height:100%;
+  margin:0;
+  display: flex;
+  flex-direction: column;
+}
+
+
 
 /* inicio css del header */
 nav{
@@ -60,9 +68,16 @@ nav h2 {
 
 /* inicio css zona principal */
 
+  main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
 
   .wrap {
-    height: 100%;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -157,6 +172,7 @@ nav h2 {
     font-family: 'Open Sans', sans-serif;
     color: #94B3FD;
     text-decoration: none;
+    text-align: center;
     text-transform: uppercase;
     font-size: 150px;
     font-weight: 800;
