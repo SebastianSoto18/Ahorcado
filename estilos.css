@@ -1,3 +1,11 @@
+html, body{
+  height:100%;
+  margin:0;
+  display: flex;
+  flex-direction: column;
+}
+
+
 
 /* inicio css del header */
 nav{
@@ -60,15 +68,23 @@ nav h2 {
 
 /* inicio css zona principal */
 
+  main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
 
   .wrap {
-    height: 100%;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 40px;
   }
 
-  .button {
+  main button{
     min-width: 300px;
     min-height: 60px;
     font-family: 'Gulzar', serif;
@@ -76,7 +92,7 @@ nav h2 {
     text-transform: uppercase;
     letter-spacing: 1.3px;
     font-weight: 700;
-    color: #313133;
+    color: white;
     background: #B983FF;
     border: none;
     border-radius: 1000px;
@@ -88,12 +104,12 @@ nav h2 {
     padding: 10px;
     }
   
-  button::before {
+  main button::before {
   content: '';
     border-radius: 1000px;
     min-width: calc(300px + 12px);
     min-height: calc(60px + 12px);
-    border: 6px solid #99FEFF;
+    border: 6px solid #94B3FD;
     box-shadow: 0 0 60px #94B3FD;
     position: absolute;
     top: 50%;
@@ -103,16 +119,15 @@ nav h2 {
     transition: all .3s ease-in-out 0s;
   }
   
-  .button:hover, .button:focus {
-    color: #313133;
+  main button:hover, main button:focus {
     transform: translateY(-6px);
   }
   
-  button:hover::before, button:focus::before {
+  main button:hover::before, main button:focus::before {
     opacity: 1;
   }
   
-  button::after {
+  main button::after {
     content: '';
     width: 30px; height: 30px;
     border-radius: 100%;
@@ -125,7 +140,7 @@ nav h2 {
     animation: ring 1.5s infinite;
   }
   
-  button:hover::after, button:focus::after {
+  main button:hover::after, main button:focus::after {
     animation: none;
     display: none;
   }
@@ -142,3 +157,77 @@ nav h2 {
       opacity: 0;
     }
   }
+
+  @media screen and (max-width: 740px){
+    main{
+    font-size:19px;
+    }
+    header h1,h2{  
+    font-size:15px;
+    }
+  }
+
+  /*a partir de aca*/
+
+  main h1 {
+    font-family: 'Open Sans', sans-serif;
+    color: #94B3FD;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 150px;
+    font-weight: 800;
+    letter-spacing: -3px;
+    line-height: 1;
+    text-shadow: #99FEFF 3px 2px 0;
+    position: relative;
+  }
+
+  main h1:after {
+    content:"juego del ahorcado";
+    position: absolute;
+    left: 8px;
+    top: 32px;
+  }
+
+  main h1:after {
+    /*background: url(https://subtlepatterns.com/patterns/crossed_stripes.png) repeat;*/
+    background-image: -webkit-linear-gradient(left top, transparent 0%, transparent 25%, #B983FF 25%, #B983FF 50%, transparent 50%, transparent 75%, #B983FF 75%);
+    background-size: 4px 4px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: -5;
+    display: block;
+    text-shadow: none;
+  }
+
+  .slide-in-right {
+    -webkit-animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+
+
+ @-webkit-keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
