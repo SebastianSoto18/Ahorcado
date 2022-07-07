@@ -81,6 +81,7 @@ nav h2 {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 40px;
   }
 
   main button{
@@ -108,7 +109,7 @@ nav h2 {
     border-radius: 1000px;
     min-width: calc(300px + 12px);
     min-height: calc(60px + 12px);
-    border: 6px solid #99FEFF;
+    border: 6px solid #94B3FD;
     box-shadow: 0 0 60px #94B3FD;
     position: absolute;
     top: 50%;
@@ -119,7 +120,6 @@ nav h2 {
   }
   
   main button:hover, main button:focus {
-    color: #313133;
     transform: translateY(-6px);
   }
   
