@@ -268,3 +268,11 @@ nav h2 {
     opacity: 1;
   }
 }
+
+/*lineas donde estaran las letras */
+
+.linea{
+  border-bottom: 5px double #1C6EA4;
+  border-radius: 0px 0px 17px 17px;
+}
+
