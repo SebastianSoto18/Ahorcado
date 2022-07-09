@@ -322,3 +322,10 @@ nav h2 {
   }
 }
 
+@media screen and (max-width:550px){
+    .linea{
+      border-bottom: 5px ridge #94B3FD;
+    }
+}
+
+
