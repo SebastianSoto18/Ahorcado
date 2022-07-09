@@ -25,7 +25,6 @@ function mostrarInformacionCaracter(evObject) {
                     seguro = true;
                     linea.textContent = elCaracter;
                     numero_de_aciertos++;
-                    console.log(palabraux);
                     if(numero_de_aciertos == palabraux.length){
                         alert("haz ganado");
                     }
