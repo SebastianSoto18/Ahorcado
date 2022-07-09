@@ -40,6 +40,7 @@ juego.addEventListener("click", function(e) {
             setTimeout(() => {cajapalabras.appendChild(linea);},100);
         
         });
+        document.querySelector('#ahorcado').classList.add('slide-in-right');
         $(".gamezone").show();
         $("main").hide();
         controljuego(true,palabraux);
