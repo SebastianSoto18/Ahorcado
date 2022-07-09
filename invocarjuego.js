@@ -1,5 +1,6 @@
 var juego = document.querySelector("#jugarb");
 var palabra;
+
 juego.addEventListener("click", function(e) {
     e.preventDefault();
     var titulo = document.querySelector("#titulo");
@@ -28,6 +29,7 @@ juego.addEventListener("click", function(e) {
 
      setTimeout(function() {
         var cajapalabras = document.querySelector('.contentpalabra');
+        var palabraux=palabra;
         palabra=palabra.split('');
         palabra.forEach(element => {
             var linea = document.createElement('li');
@@ -40,6 +42,7 @@ juego.addEventListener("click", function(e) {
         });
         $(".gamezone").show();
         $("main").hide();
+        controljuego(true,palabraux);
         },2000);
      
 
