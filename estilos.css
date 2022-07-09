@@ -286,7 +286,7 @@ nav h2 {
   flex-wrap: wrap;
   width: 80%;
   justify-content: center;
-  margin-top: 90px;
+  margin-top: 50px;
 }
 
 .linea{
@@ -310,6 +310,11 @@ nav h2 {
   }
 }
 
+canvas{
+  height: 70%;
+  width:  70%;  
+}
+
 @media screen and (max-width:960px){
   main h1{
     font-size: 60px;
@@ -328,5 +333,6 @@ nav h2 {
       border-radius: 0px 0px 10px 10px;
     }
 }
+
 
 
