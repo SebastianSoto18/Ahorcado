@@ -10,7 +10,7 @@ juego.addEventListener("click", function(e) {
         juego.style.display = "none";
     },1000);
 
-    //TODO hacer funcionalidad del juego 
+    //TODO buscar manera de que no entren palabras sin tildes
 
     const url='https://palabras-aleatorias-public-api.herokuapp.com/random';
     const Http = new XMLHttpRequest();
@@ -29,7 +29,8 @@ juego.addEventListener("click", function(e) {
 
      setTimeout(function() {
         var cajapalabras = document.querySelector('.contentpalabra');
-        var palabraux=palabra;
+        var palabraux=palabra.toUpperCase();
+        palabra=palabra.toUpperCase();
         palabra=palabra.split('');
         palabra.forEach(element => {
             var linea = document.createElement('li');
@@ -44,7 +45,7 @@ juego.addEventListener("click", function(e) {
         $(".gamezone").show();
         $("main").hide();
         controljuego(true,palabraux);
-        },2000);
+        },2500);
      
 
 });

@@ -19,9 +19,9 @@ function mostrarInformacionCaracter(evObject) {
         var seguro = false;
         campos.forEach(function(linea) {    
             if(linea.textContent == ""){
-                if(linea.id == elCaracter) {
+                if(linea.id == elCaracter.toUpperCase()) {
                     seguro = true;
-                    linea.textContent = elCaracter;
+                    linea.textContent = elCaracter.toUpperCase();
                     numero_de_aciertos++;
                     if(numero_de_aciertos == palabraux.length){
                         alert("haz ganado");
