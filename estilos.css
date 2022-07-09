@@ -89,7 +89,7 @@ nav h2 {
   main button{
     min-width: 300px;
     min-height: 60px;
-    font-family: 'Gulzar', serif;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 22px;
     text-transform: uppercase;
     letter-spacing: 1.3px;
