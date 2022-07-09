@@ -18,10 +18,11 @@ function mostrarInformacionCaracter(evObject) {
         msg = 'Tecla pulsada: ' + elCaracter;
         alert(msg);
         var campos = document.querySelectorAll('.linea');
-
+        var seguro = false;
         campos.forEach(function(linea) {    
             if(linea.textContent == ""){
                 if(linea.id == elCaracter) {
+                    seguro = true;
                     linea.textContent = elCaracter;
                     numero_de_aciertos++;
                     console.log(palabraux);
