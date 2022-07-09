@@ -33,10 +33,14 @@ juego.addEventListener("click", function(e) {
             var linea = document.createElement('li');
             linea.classList.add('linea');
             linea.classList.add('slide-in-right');
-            setTimeout(() => {cajapalabras.appendChild(linea);},500);
-            
+            linea.id = element;
+            console.log(linea.id);
+            setTimeout(() => {cajapalabras.appendChild(linea);},100);
+        
         });
-        },1000);
+        $(".gamezone").show();
+        $("main").hide();
+        },2000);
      
 
 });
