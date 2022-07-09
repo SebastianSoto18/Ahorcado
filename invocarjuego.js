@@ -34,7 +34,7 @@ juego.addEventListener("click", function(e) {
             linea.classList.add('linea');
             cajapalabras.appendChild(linea);
         });
-        },2000);
+        },1000);
      
 
 });
