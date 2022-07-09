@@ -301,6 +301,12 @@ nav h2 {
   display: inline;
 }
 
+
+img{
+  height: 50%;
+  width:  50%;  
+}
+
 @media screen and (max-width:450px){
   main h1{
     font-size: 30px;
@@ -311,12 +317,12 @@ nav h2 {
     top: 15px;
     font-size: 29.5px;
   }
+
+  img{
+    width: 70%;
+  }
 }
 
-img{
-  height: 50%;
-  width:  50%;  
-}
 
 @media screen and (max-width:960px){
   main h1{
