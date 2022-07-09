@@ -293,7 +293,7 @@ nav h2 {
   border-bottom: 21px ridge #94B3FD;
   border-radius: 0px 0px 31px 31px;
   margin:20px;
-  width: 20%;
+  width: 15%;
   text-align: center;
   display: inline;
 }
@@ -322,9 +322,10 @@ nav h2 {
   }
 }
 
-@media screen and (max-width:550px){
+@media screen and (max-width:650px){
     .linea{
-      border-bottom: 5px ridge #94B3FD;
+      border-bottom: 8px ridge #94B3FD;
+      border-radius: 0px 0px 10px 10px;
     }
 }
 
