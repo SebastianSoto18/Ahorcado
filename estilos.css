@@ -295,6 +295,9 @@ nav h2 {
 .linea{
   border-bottom: 21px ridge #94B3FD;
   border-radius: 0px 0px 31px 31px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size:60px;
+  color:  blueviolet;
   margin:20px;
   width: 15%;
   text-align: center;
@@ -340,6 +343,7 @@ img{
     .linea{
       border-bottom: 8px ridge #94B3FD;
       border-radius: 0px 0px 10px 10px;
+      font-size: 40px;
     }
 }
 
