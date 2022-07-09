@@ -32,7 +32,9 @@ juego.addEventListener("click", function(e) {
         palabra.forEach(element => {
             var linea = document.createElement('li');
             linea.classList.add('linea');
-            cajapalabras.appendChild(linea);
+            linea.classList.add('slide-in-right');
+            setTimeout(() => {cajapalabras.appendChild(linea);},500);
+            
         });
         },1000);
      
