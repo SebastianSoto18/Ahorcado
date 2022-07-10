@@ -30,10 +30,14 @@ juego.addEventListener("click", function(e) {
 
     //TODO buscar manera de que no entren palabras sin tildes
     
+    var expresion = RegExp("([ÁÉÍÓÚ-áéíóúü])+");
 
-
-    obtenerpalabra();
-
+    while(true){
+       if(!expresion.test(obtenerpalabra())){
+        break;
+       }
+    }
+    
      setTimeout(function() {
         var cajapalabras = document.querySelector('.contentpalabra');
         var palabraux=palabra.toUpperCase();
@@ -44,17 +48,14 @@ juego.addEventListener("click", function(e) {
             linea.classList.add('linea');
             linea.classList.add('slide-in-right');
             linea.id = element;
-            console.log(linea.id);
-            setTimeout(() => {cajapalabras.appendChild(linea);},100);
-        
+            cajapalabras.appendChild(linea);
         });
         document.querySelector('#ahorcado').classList.add('slide-in-right');
         $(".gamezone").show();
         $("main").hide();
         controljuego(true,palabraux);
-        },2500);
+        },1000);
      
-
 });
 
 
