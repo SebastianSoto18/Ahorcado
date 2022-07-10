@@ -1,5 +1,23 @@
 var juego = document.querySelector("#jugarb");
-var palabra;
+var palabra="";
+
+function obtenerpalabra() {
+
+    const url='https://palabras-aleatorias-public-api.herokuapp.com/random';
+    const Http = new XMLHttpRequest();
+    Http.open("GET", url);
+    Http.send();
+
+
+    Http.onreadystatechange = (e) => {
+        if (Http.readyState == 4 && Http.status == 200) {
+            datos=JSON.parse(Http.responseText);
+            palabra=datos.body.Word;
+            console.log(palabra);
+        }
+    }
+
+  }
 
 juego.addEventListener("click", function(e) {
     e.preventDefault();
@@ -11,21 +29,10 @@ juego.addEventListener("click", function(e) {
     },1000);
 
     //TODO buscar manera de que no entren palabras sin tildes
-
-    const url='https://palabras-aleatorias-public-api.herokuapp.com/random';
-    const Http = new XMLHttpRequest();
-    Http.open("GET", url);
-    Http.send();
-
     
 
-    Http.onreadystatechange = (e) => {
-        if (Http.readyState == 4 && Http.status == 200) {
-            datos=JSON.parse(Http.responseText);
-            palabra=datos.body.Word;
-            console.log(palabra);
-        }
-    }
+
+    obtenerpalabra();
 
      setTimeout(function() {
         var cajapalabras = document.querySelector('.contentpalabra');
@@ -49,3 +56,5 @@ juego.addEventListener("click", function(e) {
      
 
 });
+
+

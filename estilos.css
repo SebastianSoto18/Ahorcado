@@ -340,6 +340,8 @@ img{
   }
 }
 
+/* TODO  agregar query para 380px */
+
 @media screen and (max-width:650px){
     .linea{
       border-bottom: 8px ridge #94B3FD;
