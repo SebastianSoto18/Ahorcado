@@ -160,14 +160,6 @@ nav h2 {
     }
   }
 
-
-
-
-
-
-
-
-
   /*a partir de aca*/
 
   main h1 {
@@ -310,6 +302,55 @@ img{
   height: 50%;
   width:  40%;  
 }
+
+.botones{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  width: 50%;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.BUTTON_FDK {
+  height: auto;
+  border-radius: 20px;
+  color: #0059A0;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 20px;
+  padding: 10px;
+  border: solid #337FED 2px;
+  text-decoration: none;
+ 
+  cursor: pointer;
+
+  transition: 0.5s all;
+}
+
+.BUTTON_FDK:hover{
+ transform: scale(1.1);
+}
+
+.BUTTON_FDKK {
+    height: auto;
+    border-radius: 20px;
+    color: #B983FF;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 20px;
+    font-weight: 100;
+    padding: 10px;
+    background-color: #FFFFFF;
+    border: solid #B983FF 2px;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.5s all;
+ }
+
+ .BUTTON_FDKK:hover{
+  transform: scale(1.1);
+ }
 
 @media screen and (max-width:450px){
   main h1{
