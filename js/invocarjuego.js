@@ -46,12 +46,7 @@ juego.addEventListener("click", function(e) {
         juego.style.display = "none";
         
     },1000);
-
-    //TODO buscar manera de que no entren palabras sin tildes
-   
-    
-    
-    
+ 
      setTimeout(function() {
         var cajapalabras = document.querySelector('.contentpalabra');
         var palabraux=palabra.toUpperCase();
