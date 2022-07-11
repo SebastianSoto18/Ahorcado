@@ -40,6 +40,39 @@ function getpalabra(control) {
         }
 }
 
+
+function colocarlineas(cajapalabras) {
+    if(seguro){
+        while (cajapalabras.firstChild) {
+            cajapalabras.removeChild(cajapalabras.firstChild);
+        }
+        setTimeout(function(){
+            palabra=palabra.split('');
+            palabra.forEach(element => {
+                if(element!="" && element!=" "){
+                    var linea = document.createElement('li');
+                    linea.classList.add('linea');
+                    linea.classList.add('slide-in-right');
+                    linea.id = element;
+                    cajapalabras.appendChild(linea);
+                }
+                
+            });
+    },2000);
+       
+    }else{
+        palabra.forEach(element => {
+            if(element!="" && element!=" "){
+                var linea = document.createElement('li');
+                linea.classList.add('linea');
+                linea.classList.add('slide-in-right');
+                linea.id = element;
+                cajapalabras.appendChild(linea);
+            }
+            
+        });
+    }
+}
  
 juego.addEventListener("click", function(e) {
     e.preventDefault();
@@ -58,33 +91,7 @@ juego.addEventListener("click", function(e) {
         palabra=palabra.toUpperCase();
         palabra=palabra.split('');
         
-        if(seguro){
-            while (cajapalabras.firstChild) {
-                cajapalabras.removeChild(cajapalabras.firstChild);
-            }
-
-            palabra.forEach(element => {
-                if(element!="" && element!=" "){
-                    var linea = document.createElement('li');
-                    linea.classList.add('linea');
-                    linea.classList.add('slide-in-right');
-                    linea.id = element;
-                    cajapalabras.appendChild(linea);
-                }
-                
-            });
-        }else{
-            palabra.forEach(element => {
-                if(element!="" && element!=" "){
-                    var linea = document.createElement('li');
-                    linea.classList.add('linea');
-                    linea.classList.add('slide-in-right');
-                    linea.id = element;
-                    cajapalabras.appendChild(linea);
-                }
-                
-            });
-        }
+       colocarlineas(cajapalabras);
        
         if(!seguro){
             document.querySelector('#ahorcado').classList.add('slide-in-right');
