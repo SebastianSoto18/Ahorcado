@@ -117,7 +117,7 @@ juego.addEventListener("click", function(e) {
             controljuego(true,palabraux);
         }
        
-        },1000);
+        },500);
      
 });
 
