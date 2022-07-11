@@ -15,13 +15,11 @@ Http.onreadystatechange = (e) => {
     if (Http.readyState == 4 && Http.status == 200) {
         datos=JSON.parse(Http.responseText);
         palabra=datos.body.Word;
-        palabra=palabra.split(''); 
         console.log(palabra); 
+        palabra=palabra.split(''); 
         palabra.forEach(function(word, indices){
-            console.log(word); 
             if(tildez.findIndex( (element) => element == word ) != -1) {
                 var indice =tildez.findIndex( (element) => element == word);
-                console.log(indice);
                 palabra[indices]=normal[indice];
             }
         });
@@ -30,7 +28,6 @@ Http.onreadystatechange = (e) => {
             newpalabra+=element;
         });
         palabra=newpalabra;
-        console.log(palabra);
         }
     }
  

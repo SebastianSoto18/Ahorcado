@@ -11,7 +11,7 @@ function controljuego(seguro,palabra){
 
 function mostrarInformacionCaracter(evObject) {
 
-    var msg = ''; 
+
     var elCaracter = String.fromCharCode(evObject.which);
 
     if (evObject.which!=0 && evObject.which!=13) {
