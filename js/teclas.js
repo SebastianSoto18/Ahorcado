@@ -1,11 +1,17 @@
 numero_de_aciertos=0;
 numero_de_errores=0;
 palabraux="";
+
 function controljuego(seguro,palabra){
     if(seguro){
         palabraux=palabra;
         document.onkeypress = mostrarInformacionCaracter;
     }
+}
+
+function reiniciar(){
+    numero_de_aciertos=0;
+    numero_de_errores=0;
 }
 
 

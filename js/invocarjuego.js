@@ -47,7 +47,7 @@ function colocarlineas(cajapalabras) {
             cajapalabras.removeChild(cajapalabras.firstChild);
         }
         setTimeout(function(){
-            palabra=palabra.split('');
+           /* por alguna razon no funciona 
             palabra.forEach(element => {
                 if(element!="" && element!=" "){
                     var linea = document.createElement('li');
@@ -58,6 +58,17 @@ function colocarlineas(cajapalabras) {
                 }
                 
             });
+            */
+           for (let index = 0; index < palabra.length; index++) {
+            const element = palabra[index];
+            if(element!="" && element!=" "){
+                var linea = document.createElement('li');
+                linea.classList.add('linea');
+                linea.classList.add('slide-in-right');
+                linea.id = element;
+                cajapalabras.appendChild(linea);
+            }
+           }
     },2000);
        
     }else{

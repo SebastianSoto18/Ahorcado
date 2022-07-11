@@ -8,4 +8,5 @@ ng.addEventListener('click', function(e) {
     getpalabra(true);
     colocarlineas(cajapalabras);
     document.getElementById('ahorcado').src="img/0.png";
+    reiniciar();
 })
