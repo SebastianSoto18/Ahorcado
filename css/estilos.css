@@ -3,6 +3,8 @@ html, body{
   margin:0;
   display: flex;
   flex-direction: column;
+ 
+ 
 }
 
 
@@ -87,7 +89,7 @@ nav h2 {
   main button{
     min-width: 300px;
     min-height: 60px;
-    font-family: 'Gulzar', serif;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 22px;
     text-transform: uppercase;
     letter-spacing: 1.3px;
@@ -158,15 +160,6 @@ nav h2 {
     }
   }
 
-  @media screen and (max-width: 740px){
-    main{
-    font-size:19px;
-    }
-    header h1,h2{  
-    font-size:15px;
-    }
-  }
-
   /*a partir de aca*/
 
   main h1 {
@@ -181,6 +174,7 @@ nav h2 {
     line-height: 1;
     text-shadow: #99FEFF 3px 2px 0;
     position: relative;
+    z-index: 1;
   }
 
   main h1:after {
@@ -188,6 +182,7 @@ nav h2 {
     position: absolute;
     left: 8px;
     top: 32px;
+    z-index: 2;
   }
 
   main h1:after {
@@ -197,7 +192,7 @@ nav h2 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     z-index: -5;
-    display: block;
+    display: inline;
     text-shadow: none;
   }
 
@@ -231,3 +226,182 @@ nav h2 {
     opacity: 1;
   }
 }
+
+.slide-out-elliptic-top-bck {
+	-webkit-animation: slide-out-elliptic-top-bck 0.7s ease-in both;
+	        animation: slide-out-elliptic-top-bck 0.7s ease-in both;
+}
+
+@-webkit-keyframes slide-out-elliptic-top-bck {
+  0% {
+    -webkit-transform: translateY(0) rotateX(0) scale(1);
+            transform: translateY(0) rotateX(0) scale(1);
+    -webkit-transform-origin: 50% 1400px;
+            transform-origin: 50% 1400px;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
+            transform: translateY(-600px) rotateX(-30deg) scale(0);
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+    opacity: 1;
+  }
+}
+@keyframes slide-out-elliptic-top-bck {
+  0% {
+    -webkit-transform: translateY(0) rotateX(0) scale(1);
+            transform: translateY(0) rotateX(0) scale(1);
+    -webkit-transform-origin: 50% 1400px;
+            transform-origin: 50% 1400px;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
+            transform: translateY(-600px) rotateX(-30deg) scale(0);
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+    opacity: 1;
+  }
+}
+
+/*lineas donde estaran las letras */
+
+.gamezone{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+}
+
+.contentpalabra{
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.linea{
+  border-bottom: 21px ridge #94B3FD;
+  border-radius: 0px 0px 31px 31px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size:60px;
+  color:  blueviolet;
+  margin:20px;
+  width: 15%;
+  text-align: center;
+  display: inline;
+}
+
+
+img{
+  height: 50%;
+  width:  40%;  
+}
+
+.botones{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  width: 50%;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.BUTTON_FDK {
+  height: auto;
+  border-radius: 20px;
+  color: #0059A0;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 20px;
+  padding: 10px;
+  border: solid #337FED 2px;
+  text-decoration: none;
+ 
+  cursor: pointer;
+
+  transition: 0.5s all;
+}
+
+.BUTTON_FDK:hover{
+ transform: scale(1.1);
+}
+
+.BUTTON_FDKK {
+    height: auto;
+    border-radius: 20px;
+    color: #B983FF;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 20px;
+    font-weight: 100;
+    padding: 10px;
+    background-color: #FFFFFF;
+    border: solid #B983FF 2px;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.5s all;
+ }
+
+ .BUTTON_FDKK:hover{
+  transform: scale(1.1);
+ }
+
+@media screen and (max-width:450px){
+  main h1{
+    font-size: 30px;
+  }
+
+  main h1::after{
+    left: 5px;
+    top: 15px;
+    font-size: 29.5px;
+  }
+
+  img{
+    width: 70%;
+  }
+}
+
+
+@media screen and (max-width:960px){
+  main h1{
+    font-size: 60px;
+  }
+
+  main h1::after{
+    left: 8px;
+    top: 20px;
+    font-size: 59px;
+  }
+}
+
+@media screen and (max-width:380px){
+  main h1{
+    font-size: 60px;
+  }
+
+  main h1::after{
+    left: 8px;
+    top: 20px;
+    font-size: 59px;
+  }
+}
+
+/* TODO  agregar query para 380px */
+
+@media screen and (max-width:650px){
+    .linea{
+      border-bottom: 8px ridge #94B3FD;
+      border-radius: 0px 0px 10px 10px;
+      font-size: 35px;
+    }
+}
+
+
+
