@@ -308,7 +308,7 @@ nav h2 {
 
 img{
   height: 50%;
-  width:  50%;  
+  width:  40%;  
 }
 
 @media screen and (max-width:450px){
@@ -329,6 +329,18 @@ img{
 
 
 @media screen and (max-width:960px){
+  main h1{
+    font-size: 60px;
+  }
+
+  main h1::after{
+    left: 8px;
+    top: 20px;
+    font-size: 59px;
+  }
+}
+
+@media screen and (max-width:380px){
   main h1{
     font-size: 60px;
   }
