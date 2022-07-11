@@ -59,6 +59,19 @@ function colocarlineas(cajapalabras) {
                 
             });
             */
+
+            var newpalabra="";
+
+            for (let index = 0; index < palabra.length; index++) {
+                const element = palabra[index];
+                newpalabra+=element;
+            }
+           
+            
+            palabra=newpalabra;
+            palabra=palabra.toUpperCase();
+            console.log(palabra);
+            palabra=palabra.split('');
            for (let index = 0; index < palabra.length; index++) {
             const element = palabra[index];
             if(element!="" && element!=" "){
