@@ -21,7 +21,7 @@ out.addEventListener('click', function(e) {
         juegob.setAttribute("style", "text-align:center");
         juegob.classList.remove("slide-out-elliptic-top-bck");
         titulo.classList.remove("slide-out-elliptic-top-bck");
-       
+        getpalabra(true); 
         $("main").show();
     },2000);
     
