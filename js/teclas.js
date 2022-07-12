@@ -17,7 +17,7 @@ function reiniciar(){
 
 function mostrarInformacionCaracter(evObject) {
 
-
+    var error = [];
     var elCaracter = String.fromCharCode(evObject.which);
 
     if (evObject.which!=0 && evObject.which!=13) {
@@ -37,6 +37,11 @@ function mostrarInformacionCaracter(evObject) {
         });
         if(!seguro){
             numero_de_errores++;
+            if(error.findIndex((element) => element == elCaracter)== -1){
+                var errormes= document.querySelector('#letters');
+                errormes.textContent+=elCaracter.toUpperCase();
+                error.push(elCaracter.toUpperCase());
+            }
             document.querySelector('#ahorcado').src="img/"+numero_de_errores+".png";
             if(numero_de_errores==6){
                 alert("haz perdido");
