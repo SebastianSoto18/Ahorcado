@@ -21,12 +21,12 @@ function getpalabra(control) {
             datos=JSON.parse(Http.responseText);
             palabra=datos.body.Word;
             palabra=palabra.split(''); 
-            console.log(palabra); 
+           
             palabra.forEach(function(word, indices){
-                console.log(word); 
+              
                 if(tildez.findIndex( (element) => element == word ) != -1) {
                     var indice =tildez.findIndex( (element) => element == word);
-                    console.log(indice);
+                  
                     palabra[indices]=normal[indice];
                 }
             });
@@ -35,7 +35,8 @@ function getpalabra(control) {
                 newpalabra+=element;
             });
             palabra=newpalabra;
-            console.log(palabra);
+            controljuego(false,palabra);
+          
             }
         }
 }
@@ -65,7 +66,8 @@ function colocarlineas(cajapalabras) {
                 var linea = document.createElement('li');
                 linea.classList.add('linea');
                 linea.classList.add('slide-in-right');
-                linea.id = element;
+                linea.id = element.toUpperCase();
+             
                 cajapalabras.appendChild(linea);
             }
            }
@@ -89,6 +91,7 @@ juego.addEventListener("click", function(e) {
     e.preventDefault();
     
     var titulo = document.querySelector("#titulo");
+    var letters = document.querySelector("#letters");
     juego.classList.add("slide-out-elliptic-top-bck");
     titulo.classList.add("slide-out-elliptic-top-bck");
     setTimeout(function() { 
@@ -106,6 +109,7 @@ juego.addEventListener("click", function(e) {
        
         if(!seguro){
             document.querySelector('#ahorcado').classList.add('slide-in-right');
+            letters.classList.add("scale-in-center");
             $(".gamezone").show();
             $("main").hide();
             controljuego(true,palabraux);
