@@ -352,6 +352,11 @@ img{
   transform: scale(1.1);
  }
 
+ #letters{
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+ }
+
 @media screen and (max-width:450px){
   main h1{
     font-size: 30px;
