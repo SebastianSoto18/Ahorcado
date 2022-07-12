@@ -1,7 +1,7 @@
 numero_de_aciertos=0;
 numero_de_errores=0;
 palabraux="";
-
+var error = [];
 function controljuego(seguro,palabra){
     if(seguro){
         palabraux=palabra;
@@ -17,7 +17,7 @@ function reiniciar(){
 
 function mostrarInformacionCaracter(evObject) {
 
-    var error = [];
+  
     var elCaracter = String.fromCharCode(evObject.which);
 
     if (evObject.which!=0 && evObject.which!=13) {
@@ -37,15 +37,22 @@ function mostrarInformacionCaracter(evObject) {
         });
         if(!seguro){
             numero_de_errores++;
-            if(error.findIndex((element) => element == elCaracter)== -1){
+            
+            if(error.findIndex((element) => element == elCaracter.toUpperCase())== -1){
                 var errormes= document.querySelector('#letters');
                 errormes.textContent+=elCaracter.toUpperCase();
                 error.push(elCaracter.toUpperCase());
+                console.log(error);
+                console.log(error.findIndex((element) => element == elCaracter));
             }
-            document.querySelector('#ahorcado').src="img/"+numero_de_errores+".png";
-            if(numero_de_errores==6){
-                alert("haz perdido");
+        
+            if(numero_de_errores<=6){
+                document.querySelector('#ahorcado').src="img/"+numero_de_errores+".png";
             }
+            if(numero_de_errores==6){   
+                alert("Haz perdido");
+            }
+            
         }
     }
 
