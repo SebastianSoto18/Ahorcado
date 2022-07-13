@@ -1,13 +1,10 @@
+/*centrar todos los elementos al centro de la pagina*/
 html, body{
   height:100%;
   margin:0;
   display: flex;
   flex-direction: column;
 }
-
-
-
-
 
 /* inicio css del header */
 nav{
@@ -78,6 +75,7 @@ nav h2 {
     height: 100%;
   }
 
+  /* inicio css del boton jugar*/
   .wrap {
     height: auto;
     display: flex;
@@ -159,9 +157,9 @@ nav h2 {
       opacity: 0;
     }
   }
+/* fin css del boton jugar*/
 
-  /*a partir de aca*/
-
+/* inicio css titulo principal */
   main h1 {
     font-family: 'Open Sans', sans-serif;
     color: #94B3FD;
@@ -214,6 +212,7 @@ nav h2 {
     opacity: 1;
   }
 }
+
 @keyframes slide-in-right {
   0% {
     -webkit-transform: translateX(1000px);
@@ -265,6 +264,8 @@ nav h2 {
   }
 }
 
+/*fin css titulo principal*/
+
 /*lineas donde estaran las letras */
 
 .gamezone{
@@ -296,12 +297,15 @@ nav h2 {
   display: inline;
 }
 
+/* fin de las lineas*/
 
+/*imagen ahorcado*/
 img{
   height: 50%;
   width:  40%;  
 }
 
+/*container de los botones newgame y desistir*/
 .botones{
   display: flex;
   flex-wrap: wrap;
@@ -313,6 +317,7 @@ img{
   margin-bottom: 20px;
 }
 
+/*boton de nuevo juego */
 .BUTTON_FDK {
   height: auto;
   border-radius: 20px;
@@ -332,6 +337,9 @@ img{
  transform: scale(1.1);
 }
 
+/*----------------------------------------------------------------*/
+
+/*boton de desistir*/
 .BUTTON_FDKK {
     height: auto;
     border-radius: 20px;
@@ -352,12 +360,18 @@ img{
   transform: scale(1.1);
  }
 
+ /*----------------------------------------------------------------*/
+
+ /*span donde se muestran las letras erradas */
  #letters{
   font-family: 'IBM Plex Mono', monospace;
   font-size: 12px;
   margin-top: 20px;
  }
 
+ /*----------------------------------------------------------------*/
+
+ /*animacion de agrandar de los botones */
  .scale-in-center {
 	-webkit-animation: scale-in-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: scale-in-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -369,7 +383,7 @@ img{
     -webkit-transform: scale(0);
             transform: scale(0);
     opacity: 1;
-  }
+  } 
   100% {
     -webkit-transform: scale(1);
             transform: scale(1);
@@ -390,7 +404,10 @@ img{
   }
 }
 
+/*----------------------------------------------------------------*/
 
+
+/*adaptabilidad segun el ancho*/
 @media screen and (max-width:450px){
   main h1{
     font-size: 30px;
@@ -440,7 +457,6 @@ img{
   }
 }
 
-/* TODO  agregar query para 380px */
 
 @media screen and (max-width:650px){
     .linea{
