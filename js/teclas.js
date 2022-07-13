@@ -1,8 +1,8 @@
 numero_de_aciertos=0;
 numero_de_errores=0;
 palabraux="";
-var win = new Audio("audio/mixkit-auditorium-moderate-applause-and-cheering-502.wav");
-var lose = new Audio("audio/mixkit-retro-arcade-game-over-470.wav");
+var win = new Audio("audio/mixkit-auditorium-moderate-applause-and-cheering-502.mp3");
+var lose = new Audio("audio/mixkit-retro-arcade-game-over-470.mp3");
 var error = [];
 
 function controljuego(seguro,palabra){
