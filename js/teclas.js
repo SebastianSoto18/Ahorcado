@@ -4,6 +4,7 @@ palabraux="";
 var win = new Audio("../audio/mixkit-auditorium-moderate-applause-and-cheering-502.wav");
 var lose = new Audio("../audio/mixkit-retro-arcade-game-over-470.wav");
 var error = [];
+
 function controljuego(seguro,palabra){
     if(seguro){
         palabraux=palabra;
@@ -19,7 +20,6 @@ function reiniciar(){
     error = [];
     document.querySelector('#letters').textContent="Fallaste con la letra:";
 }
-
 
 function mostrarInformacionCaracter(evObject) {
 

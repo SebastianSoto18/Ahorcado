@@ -320,6 +320,7 @@ img{
 /*boton de nuevo juego */
 .BUTTON_FDK {
   height: auto;
+  background-color:white;
   border-radius: 20px;
   color: #0059A0;
   font-family: 'IBM Plex Mono', monospace;
@@ -327,9 +328,7 @@ img{
   padding: 10px;
   border: solid #337FED 2px;
   text-decoration: none;
- 
   cursor: pointer;
-
   transition: 0.5s all;
 }
 
