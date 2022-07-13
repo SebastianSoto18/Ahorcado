@@ -1,6 +1,8 @@
 numero_de_aciertos=0;
 numero_de_errores=0;
 palabraux="";
+var win = new Audio("../audio/mixkit-auditorium-moderate-applause-and-cheering-502.wav");
+var lose = new Audio("../audio/mixkit-retro-arcade-game-over-470.wav");
 var error = [];
 function controljuego(seguro,palabra){
     if(seguro){
@@ -38,8 +40,17 @@ function mostrarInformacionCaracter(evObject) {
                         numero_de_aciertos++;
     
                         
-                        if(numero_de_aciertos == palabraux.length){
-                            alert("haz ganado");
+                    if(numero_de_aciertos == palabraux.length){
+                        win.play();
+                        Swal.fire({
+                            title: 'Haz ganado :D ',
+                            showClass: {
+                              popup: 'animate__animated animate__zoomIn'
+                            },
+                            hideClass: {
+                              popup: 'animate__animated animate__zoomOut'
+                            }
+                          });
                         }
                     }
                 }
@@ -57,7 +68,18 @@ function mostrarInformacionCaracter(evObject) {
                     document.querySelector('#ahorcado').src="img/"+numero_de_errores+".png";
                 }
                 if(numero_de_errores==6){   
-                    alert("Haz perdido la palabra era: "+palabraux);
+                    lose.play();
+                    Swal.fire({
+                        title: 'Haz perdido, la palabra era: '+" "+palabraux,
+                        showClass: {
+                          popup: 'animate__animated animate__zoomIn'
+                        },
+                        hideClass: {
+                          popup: 'animate__animated animate__zoomOut'
+                        }
+                      });
+
+                    
                 }
                 
               
